@@ -15,6 +15,11 @@
 }
 */
 
+@font-face {
+    font-family: "Tiktok";
+    src: url("../fonts/TikTokSans-VariableFont_opsz\,slnt\,wdth\,wght.ttf");
+}
+
 body
 {
     width: 100vw;
@@ -22,6 +27,7 @@ body
     margin: 0;
     background-color: rgb(52, 52, 52);
     color: white;
+    font-family: "Tiktok", Arial, Helvetica, sans-serif;
 }
 
 main
@@ -64,11 +70,17 @@ main
     padding-left: calc(5% - 3px);
 }
 
+.sidebar > hr
+{
+    border: 2px solid rgb(110, 110, 110);
+    width: 85%;
+    border-radius: 2px;
+}
+
 #sidebar-chat-bubble
 {
-    border-radius: 0%;
-    padding-bottom: 10px;
-    border-bottom: 2px solid rgb(247, 245, 245);
+    width: 85%;
+    object-fit: contain;
 }
 
 .content
@@ -96,7 +108,7 @@ main
 {
     text-indent: 2vw;
     margin: 10px 0px 5px 0px;
-    font-size: 5vh;
+    font-size: 4vh;
 }
 
 .content-header-extra
@@ -109,6 +121,9 @@ main
     margin-left: 2vw;
 }
 
+
+
+
 .content-header-extra > input
 {
     width: calc(70% - 2vw);
@@ -120,6 +135,8 @@ main
 {
     width: 5vh;
     height: 5vh;
+    border-radius: 100%;
+    background-color: rgb(110, 110, 110);
 }
 
 .content-body
@@ -174,10 +191,19 @@ main
     background-repeat: no-repeat;
 }
 
+
 .user-in-channel
 {
     display: flex;
     height: 4vh;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.user-in-channel:hover,.text-channel:hover
+{
+    background-color: rgb(110, 110, 110);
+    border-radius: 5px;
 }
 
 .user-in-channel > img
@@ -192,3 +218,22 @@ main
     margin: 0;
 }
 
+@media (width > 700px)
+{
+    .sidebar
+    {
+        width: 80px;
+    }
+
+    .content
+    {
+        left: 80px;
+        
+    }
+
+    .content-header
+    {
+        border-bottom-right-radius: 20px;
+        width: calc(100vw - 160px);
+    }
+}

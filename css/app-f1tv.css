@@ -1,0 +1,225 @@
+/* {
+    outline: 1px solid red;
+}*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Michroma";
+    src: url("../fonts/Michroma-Regular.ttf");
+}
+
+body
+{
+    font-family: "Michroma", Verdana, Geneva, Tahoma, sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: rgb(50, 50, 50);
+    color: whitesmoke;
+}
+
+header
+{
+    position: fixed;
+    height: 5vh;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(50, 50, 50);
+    width: 100vw;
+    border-bottom: 1px solid gray;
+}
+
+
+main
+{
+    position: relative;
+    top: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+
+/* -------- BURGER MENU ------------*/
+
+.burger-menu-choice
+{
+    display: none;
+}
+
+#burger-menu-icon > img
+{
+    height: 5vh;
+    aspect-ratio: 1/1;
+}
+
+.logo
+{
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+}
+
+.logo  img
+{
+    height: 5vh;
+    width: 15vw;
+    object-fit: cover;
+}
+
+#burger-menu-icon:hover > .burger-menu-choices
+{
+    position: absolute;
+    display: block;
+}
+
+#burger-menu-icon:hover  .burger-menu-choice
+{
+    position: relative;
+    display: block;
+    padding: 3px;
+    background-color: rgb(50, 50, 50);
+}
+
+
+/* -------------- CONTENT CARD ---------------*/
+
+.category-description > h1
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.category-description > p
+{
+    font-size: 0.8rem;
+}
+
+.category-description
+{
+    padding-bottom: 5%;
+}
+
+.category-elements
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.category-element
+{
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid gray;
+}
+
+.category-element > img
+{
+    width: 40%;
+    height: 70%;
+    margin-bottom :5%;
+    margin-top :5%;
+    margin-right: 5%;
+}
+
+.element-description
+{
+    margin-top: 5%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.element-description-title
+{
+    display: inline;
+}
+
+.element-description-title > img
+{
+    width: 5vh;
+    height: 3vh;
+}
+
+.element-description-title > p
+{
+    display: inline;
+    margin-left: 2px;
+    font-weight: bolder;
+}
+
+.element-description-body 
+{
+    font-size: 0.6rem;
+}
+
+.element-description-info
+{
+    font-size: 0.6rem;
+    color: rgb(186, 186, 186);
+    margin-top:auto;
+    margin-bottom: 3%;
+}
+
+@media (width > 700px) {
+    #burger-menu-icon > img
+    {
+        display: none;
+    }
+
+    .burger-menu-choices{
+        display: flex;
+        margin-left: 5vw;
+    }
+
+    .burger-menu-choice
+    {
+        display: block;
+    }
+
+    header
+    {
+        height: 10vh;
+    }
+
+    main 
+    {
+        top: 10vh;
+    }
+
+    .category-element
+    {
+        max-width: 350px;
+
+    }
+
+    .category-elements 
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 5%;
+    }
+
+    #burger-menu-icon
+    {
+        pointer-events: none;
+    }
+
+    .logo 
+    {
+        height: 10vh;
+    }
+
+
+    .category-element > img
+    {
+        width: 40%;
+        height: 70%;
+    }
+}
