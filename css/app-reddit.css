@@ -1,0 +1,200 @@
+* {
+    outline: 1px solid red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img
+{
+    width: 10px;
+    height: 10px;
+}
+
+summary {
+  display: block;
+}
+
+
+
+body
+{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+
+/* ------------------- HEADER ----------------------*/
+
+
+header
+{
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    padding-left: 5px;
+    padding-right: 5px;
+    align-items: center;
+}
+
+
+.logo-menu-items
+{
+    display: none;
+}
+
+#header-reddit-logo
+{
+    width: 20vw;
+    aspect-ratio: 1 / 1;
+    zoom: 150%
+}
+
+header > img
+{
+    height: 100%;
+    width: auto;
+    aspect-ratio: 1 / 1;
+}
+
+#header-search-image
+{
+    margin-left:auto;
+}
+
+#header-user-avatar
+{
+    border-radius: 100%;
+}
+
+#header-burger-icon
+{
+    zoom:200%;
+}
+
+.logo:hover .logo-menu-items
+{
+    position: absolute;
+    display: block;
+    width: 30vw;
+}
+
+.logo:hover .logo-menu-item
+{
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+/* --------------- FOOTER --------------------*/
+
+footer
+{
+    height: 7vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-item
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-item > img
+{
+    width: 5vw;
+    height: auto;
+}
+
+.footer-item > p
+{
+    font-size: 0.6rem;
+}
+
+/* ------------ MAIN --------------- */
+
+.card-item
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header
+{
+    display: flex;
+    align-items: center;
+    height: 5vh;
+}
+
+.card-header > img
+{
+    height: 80%;
+    width: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+}
+
+.card-header > p
+{
+    font-size: 0.8rem;
+    margin-left: 3px;
+}
+
+.card-body-link
+{
+    display: flex;
+    padding: 1%;
+}
+
+.card-link-title
+{
+    width: 78%;
+}
+
+.card-body-link > img
+{
+    width: 20%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.card-footer
+{
+    display: flex;
+}
+
+.card-votes
+{
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.card-votes > *
+{
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.card-votes > img
+{
+    height: 100%;
+    width: auto;
+    aspect-ratio: 1/1;
+}
+
+.card-comments
+{
+
+}
+
+.card-share
+{
+
+}
