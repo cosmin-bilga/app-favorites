@@ -1,6 +1,6 @@
-* {
+/* {
     outline: 1px solid red;
-}
+}*/
 
 * {
     margin: 0;
@@ -24,6 +24,12 @@ body
 {
     width: 100vw;
     overflow-x: hidden;
+    font-family: "Domine", 'Times New Roman', Times, serif;
+}
+
+@font-face {
+    font-family: "Domine";
+    src: url("../fonts/Domine-VariableFont_wght.ttf");
 }
 
 
@@ -40,10 +46,18 @@ header
     align-items: center;
 }
 
+.sidelist-communities-desktop
+{
+    display: none;
+}
 
 .logo-menu-items
 {
     display: none;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+    z-index:2;
 }
 
 #header-reddit-logo
@@ -78,24 +92,43 @@ header > img
 .logo:hover .logo-menu-items
 {
     position: absolute;
+    left: 15vw;
     display: block;
     width: 30vw;
+    background-color: white;
 }
 
 .logo:hover .logo-menu-item
 {
     display: flex;
     align-items: center;
-    background-color: white;
+    padding-left: 2vh;
+}
+
+.logo:hover .logo-menu-item:hover
+{
+    background-color: rgb(193, 193, 193);
+    border-radius: 10px;
+}
+
+.logo-menu-item *
+{
+    padding-right: 3px;
 }
 
 /* --------------- FOOTER --------------------*/
 
 footer
 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
     height: 7vh;
+    width: 100vw;
     display: flex;
     justify-content: space-around;
+    z-index: 2;
+    background-color: white;
 }
 
 .footer-item
@@ -106,9 +139,14 @@ footer
     align-items: center;
 }
 
+.footer-item:hover
+{
+    zoom: 110%
+}
+
 .footer-item > img
 {
-    width: 5vw;
+    width: 5vh;
     height: auto;
 }
 
@@ -119,10 +157,18 @@ footer
 
 /* ------------ MAIN --------------- */
 
+main
+{
+    padding-bottom: 11vh;
+    z-index:1;
+}
+
 .card-item
 {
     display: flex;
     flex-direction: column;
+    padding: 2%;;
+    border-bottom: 1px solid gray;
 }
 
 .card-header
@@ -174,6 +220,10 @@ footer
     display: flex;
     align-items: center;
     font-size: 0.8rem;
+    padding-right: 5px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    margin-right: 10px;
 }
 
 .card-votes > *
@@ -182,19 +232,146 @@ footer
     padding-right: 2px;
 }
 
-.card-votes > img
+
+.card-votes-downarrow, .card-votes-uparrow
 {
-    height: 100%;
-    width: auto;
-    aspect-ratio: 1/1;
+    width: 30%;
 }
+
+.card-votes-downarrow
+{
+    padding-left: 5px;
+    border-left: 1px solid gray;
+}
+
+
+
 
 .card-comments
 {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    padding-right: 5px;
+    border: 1px solid gray;
+    border-radius: 15px;
+}
 
+.card-comments-chatbubble
+{
+    width: 40%;
+    padding-right: 5px;
 }
 
 .card-share
 {
+    margin-left: auto;
+    margin-right: calc(10px + 1%);
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    padding-right: 5px;
+    border: 1px solid gray;
+    border-radius: 15px;
+}
+
+
+/* -------------------- BURGER MENU -------------------- */
+
+
+.sidelist-communities
+{
+    position: absolute;
+    top: 5vh;
+    left: 0;
+    background-color: white;
+    height: 90vh;
+    border-right: 1px solid gray;
+    display: block;    
+}
+
+.community-link
+{
+    display: flex;
+    align-items: center;
+    padding-bottom: 3px;
+    padding-right: 4px;
+    padding-left: 5px;
+}
+
+.community-link > p
+{
+    font-size: 0.9rem;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.community-link:hover
+{
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+@media (width > 700px) {
+
+    header 
+    {
+        position: relative;
+        height: 7vh;
+        left: 15vw;
+        width: 85vw;
+    }
+
+    .community-burger-menu
+    {
+        display: none;
+    }
+
+    .sidelist-communities-desktop
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: white;
+        height: 100vh;
+        border-right: 1px solid gray;
+        display: block; 
+        width: 15vw;   
+        text-align: center;
+    }
+
+    .sidelist-communities-desktop > p
+    {
+        font-weight: bold;
+        margin-top: 15px;
+        margin-bottom: 5vh;
+    }   
+
+    .sidelist-communities-desktop .community-link:last-child
+    {
+        margin-left: auto;
+    }
+
+    main 
+    {
+        position: relative;
+        left: 15vw;
+        width: 80vw;
+        padding-bottom: 0;
+    }
+
+    .logo 
+    {
+        width: 5vw;
+    }
+
+    footer 
+    {
+        left: 95vw;
+        width: 5vw;
+        top: 6vh;
+        flex-direction: column;
+        height: 93vh;
+    }
 
 }
