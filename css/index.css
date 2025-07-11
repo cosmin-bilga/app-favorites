@@ -25,9 +25,9 @@ header
     color:white;
     background-color: black;
     width: calc(100vw - 6px);
-    padding-top: 4vw;
-    padding-bottom: 4vw;
-    height: 10vw;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    height: 10vh;
     margin-left: 3px;
     margin-right: 3px;
     border-bottom-left-radius: 15px;
@@ -42,7 +42,7 @@ header > h1
 main
 {
     position: relative;
-    top: 18vw;
+    top: 18vh;
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -60,24 +60,18 @@ main
     border-radius: 15px;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-.app-choice > img
-{
-    height: 60%;
-    width: 30%;
-    /*background-color: white;
-    border-radius: 50%;*/
-}
-
-.app-choice > .app-info
+.app-info
 {
     width: 70%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 2%;
 }
 
 .app-info > p
@@ -85,6 +79,7 @@ main
     position: relative;
     text-align: center;
     font-family: "Domine", Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.9rem;
 }
 
 .app-name
@@ -118,4 +113,116 @@ a:hover {
     color: inherit;
     text-decoration:none; 
     cursor:pointer;  
+}
+
+/* --------- REFACTORING */
+
+
+.app-choice-body
+{
+    display: flex;
+    height: 80%;
+    width: 90%;
+    border-bottom: 1px solid black;
+}
+
+.app-logo
+{
+    width: 30%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+
+}
+
+.app-logo img
+{
+    width: 100%;
+    object-fit: contain;
+}
+
+.app-links
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+  
+}
+
+.app-links > *
+{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.app-links-medias
+{
+    display:flex;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.app-links-medias > *
+{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+ .app-link-download, .app-link-demo, .app-link-fb, .app-link-insta, .app-link-x
+{
+    width: 5%;
+    aspect-ratio: 1/1;
+    align-self: stretch;
+}
+
+ .app-link-download, .app-link-demo
+ {
+    display: flex;
+    align-items: center;
+ }
+
+.app-links img
+{
+    object-fit: contain;
+    width: 100%;
+}
+
+.app-preview
+{
+    display: none;
+}
+
+
+.app-link-demo:hover > .app-preview
+{
+    display: block;
+    position: absolute;
+    transform: translate(20px, -100px);
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    z-index: 3;
+}
+
+
+
+
+@media (width > 700px) {
+    
+    main 
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .app-choice
+    {
+        width: 600px;
+        min-height: 250px;
+        height: auto;
+    }
 }
